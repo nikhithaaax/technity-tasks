@@ -196,4 +196,50 @@ int largest_palindrome(int N) {
 }
 
 
+#5
+
+#include<stdio.h>
+
+int main(){
+	int t;
+	printf("enter the no. of test cases : ");
+	scanf("%d",&t);
+	for(int a=0;a<t;a++){
+		int N;
+		printf("Enter a value of N : ");
+		scanf("%d",&N);
+		int smallest_multiple(int num);
+		
+		int result = smallest_multiple(N);
+		
+	if (N==0) {
+        printf("No evenly divisible number found.\n");
+    } else {
+        printf("The smallest positive number that is evenly divisible from 1 to %d is %d.\n", N, result);
+    }
+}
+	return 0;
+}
+
+int gcd(int a, int b) {
+    if (b == 0) {
+        return a;
+    }
+    return gcd(b, a % b);
+}
+
+int lcm(int a, int b) {
+    return (a * b) / gcd(a, b);
+}
+
+int smallest_multiple(int N) {
+    int result = 1;
+
+    for (int i = 2; i <= N; i++) {
+        result = lcm(result, i);
+    }
+
+    return result;
+}
+
 	
