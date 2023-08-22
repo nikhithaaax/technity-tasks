@@ -65,6 +65,24 @@ candles=[3,2,1,3]
 
 result=birthdayCakeCandles(candles)
 print("no. of tallest candles are : ", result)
-        
+
+
+#5
+
+def timeConversion(s):
+        time = s.split(":")
+        if s[-2:] == "PM":
+            if time[0] != "12":
+                time[0] = str(int(time[0])+12)
+        else:
+            if time[0] == "12":
+                time[0] = "00"
+        ntime = ':'.join(time)
+        return str(ntime[:-2])
+    
+time_12hr = "07:05:45 PM"
+    
+time_24hr = timeConversion(time_12hr)
+print("Time in 24-hour format:", time_24hr)
 
 
