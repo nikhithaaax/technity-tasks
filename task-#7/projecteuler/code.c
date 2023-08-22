@@ -71,3 +71,68 @@ int main() {
 }
     return 0;
 }
+
+
+#3
+
+#include <stdio.h>
+
+int main() {
+	int t;
+	printf("enter the no. of test cases : ");
+	scanf("%d",&t);
+	for(int a=0;a<t;a++){
+	
+	
+    int N;
+    printf("Enter a number: ");
+    scanf("%d", &N);
+    int largest_prime_factor(int num);
+    int result = largest_prime_factor(N);
+    
+    if (result == -1) {
+        printf("The number %d doesn't have any prime factors.\n", N);
+    } else {
+        printf("The largest prime factor of %d is %d.\n", N, result);
+    }
+}
+    return 0;
+}
+
+
+int is_prime(int num) {
+    if (num <= 1) {
+        return 0;
+    }
+    
+    for (int i = 2; i * i <= num; i++) {
+        if (num % i == 0) {
+            return 0;
+        }
+    }
+    
+    return 1;
+}
+
+int largest_prime_factor(int num) {
+    int largest = -1;
+
+    for (int i = 2; i * i <= num; i++) {
+        if (num % i == 0 && is_prime(i)) {
+            largest = i;
+        }
+
+        // Remove all occurrences of i from num
+        while (num % i == 0) {
+            num=num/i;
+        }
+    }
+
+    if (num > 1 && is_prime(num)) {
+        largest = num;
+    }
+
+    return largest;
+}
+
+	
