@@ -39,3 +39,32 @@ arr = [
 result = diagonal_difference(arr)
 print("Diagonal difference:", result)
 
+
+#3
+
+def staircase(n):
+  
+    
+    for i in range(1,n+1):
+        space= " " * (n-i)
+        steps="#" * i 
+        print(space+steps)
+            
+#staircase(6)
+
+
+#4
+
+def birthdayCakeCandles(candles):
+
+    max_height=max(candles)
+    count_max=candles.count(max_height)
+    return count_max
+    
+candles=[3,2,1,3]
+
+result=birthdayCakeCandles(candles)
+print("no. of tallest candles are : ", result)
+        
+
+
