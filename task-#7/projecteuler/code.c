@@ -135,4 +135,65 @@ int largest_prime_factor(int num) {
     return largest;
 }
 
+
+#4
+
+#include <stdio.h>
+
+int main() {
+	int t;
+	printf("enter the no. of test cases : ");
+	scanf("%d",&t);
+	for(int a=0;a<t;a++){
+	
+	
+    int N;
+    printf("Enter a value of N: ");
+    scanf("%d", &N);
+    int largest_palindrome(int num);
+    int result = largest_palindrome(N);
+
+    if (result == -1) {
+        printf("No palindrome found.\n");
+    } else {
+        printf("The largest palindrome less than %d is %d.\n", N, result);
+    }
+}
+    return 0;
+    
+    
+}
+
+
+int is_palindrome(int num) {
+    int original = num;
+    int reverse = 0;
+
+    while (num > 0) {
+        int digit = num % 10;
+        reverse = reverse * 10 + digit;
+        num=num/10;
+    }
+
+    return original == reverse;
+}
+
+int largest_palindrome(int N) {
+    int largest = -1;
+
+    for (int i = 999; i >= 100; i--) {
+        for (int j = 999; j >= 100; j--) {
+            int product = i * j;
+            if (product < N && is_palindrome(product)) {
+                if (product > largest) {
+                    largest = product;
+                }
+            }
+        }
+    }
+
+    return largest;
+}
+
+
 	
