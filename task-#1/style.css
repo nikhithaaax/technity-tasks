@@ -1,0 +1,109 @@
+*{
+    margin:0;
+    padding:0;
+    font-family:Montserrat;
+    background-color: #e3f0ff;
+}
+.nav-bar{   
+    height:10vh;
+    background-color:#e3f0ff;
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+
+}
+.nav-links ul li{
+    list-style-type: none;
+    margin:auto 30px
+}
+.nav-links ul li a{
+    text-decoration: none;
+    color:#2d2c62;
+    letter-spacing: 1px;
+
+}
+.nav-bar .logoname{
+    margin-left: 60px;
+    color: #2d2c62;
+                            
+
+}
+.nav-links ul{
+    display:flex   /*Alignment*/
+
+}
+#premium{
+    
+    padding: 15px 15px;  /*button*/
+    background-color: #5654b3;
+    color: white;
+    border-radius: 5px;
+    
+
+}
+
+
+.container {
+        
+    display: flex;
+}
+
+.title{
+    font-size: 50px;
+    margin-left: 50px;
+    margin-top: 100px;
+    color: #2d2c62;
+    font-family: Montserrat;
+    
+    
+}
+
+.img{
+    float:right;
+    margin-right: 5px;
+    margin-top: 40px;
+    justify-content: right;
+    
+}
+
+.small-text{
+    font-size: 15px;
+    padding: 10px;
+    line-height: 30px;
+}
+.email{
+    padding: 15px;
+    background-color: white;
+    border-color: white;
+    width:250px;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+}
+#button{
+    padding: 15px;
+    background-color:#5654b3;
+    width: 150px;
+    color: white;
+    border-color:#5654b3;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+.icons{
+    position:fixed;
+   margin-left: 30px;
+   top:658px;
+}
+.fa-brands {
+   
+    padding: 6px;
+  
+   font-size: 32px;
+   
+  
+}
+.icons2{
+    position:fixed;
+    margin-right: 30px;
+    top: 695px;
+    padding-left: 1300px;
+}
